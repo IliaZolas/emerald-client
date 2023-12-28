@@ -9,4 +9,4 @@ It is a basic calculator that calculates the ROI on a property that may be manag
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Updates
-Currently in development, this read me will be updated towards the end of the project
+Currently in development, this read me will be updated towards the end of the project...
