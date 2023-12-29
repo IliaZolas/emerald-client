@@ -33,7 +33,7 @@ cd client
 Install node version 18.3.0 if you do not already have it. I prefer using NVM for this.
 
 ```bash
-// to check what your current node version is
+# to check what your current node version is
 node -v
 
 nvm install v18.3.0
