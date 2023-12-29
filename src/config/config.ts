@@ -1,5 +1,5 @@
 const production = {
-        url: 'https://emerald-stay.railway.app'    
+        url: 'https://emerald-server-production.up.railway.app'    
     };
 const development = {
         url: 'http://localhost:4000'
