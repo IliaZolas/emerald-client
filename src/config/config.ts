@@ -1,5 +1,5 @@
 const production = {
-        url: process.env["PROD_SERVER_URL"] 
+        url: 'https://emerald-server-production.up.railway.app'    
     };
 const development = {
         url: 'http://localhost:4000'
