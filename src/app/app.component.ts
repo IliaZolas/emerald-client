@@ -10,9 +10,9 @@ const URL = config.url;
 })
 export class AppComponent {
   title = 'client';
-  purchasePrice: number = 0; 
-  monthlyRent: number = 0;
-  annualRentalFee: number = 0;
+  purchasePrice: number | null = null; 
+  monthlyRent: number | null = null;
+  annualRentalFee: number | null = null;
 
   roiY1: number = 0;
   roiY2: number = 0;
@@ -27,6 +27,13 @@ export class AppComponent {
   }
 
   private makeFetchRequest() {
+    const isValidInput = this.validateNumericInput();
+
+    if (!isValidInput) {
+      console.error('Invalid input. Please enter valid numeric values.');
+      return;
+    }
+
     const data = {
       purchasePrice: this.purchasePrice,
       monthlyRent: this.monthlyRent,
@@ -51,6 +58,20 @@ export class AppComponent {
       .catch(error => {
         console.error('Error during fetch:', error);
       });
+  }
+
+  private validateNumericInput(): boolean {
+    const numericRegex = /^[1-9]\d*(\.\d{1,2})?$/;
+  
+    if (
+      !numericRegex.test(String(this.purchasePrice)) ||
+      !numericRegex.test(String(this.monthlyRent)) ||
+      !numericRegex.test(String(this.annualRentalFee))
+    ) {
+      return false;
+    }
+  
+    return true;
   }
 }
 
