@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { config } from '../config/config';
+
+const URL = config.url;
 
 @Component({
   selector: 'app-root',
@@ -30,7 +33,7 @@ export class AppComponent {
       annualRentalFee: this.annualRentalFee
     };
 
-    fetch('http://localhost:4000/calculate', {
+    fetch(`${URL}/calculate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
