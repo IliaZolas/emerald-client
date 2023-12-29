@@ -27,7 +27,6 @@ The frontend is an app built with:
 To get started, clone this repo and cd into the app directory.
 
 ```
-g clone
 cd client
 ```
 
