@@ -31,6 +31,7 @@ export class AppComponent {
 
     if (!isValidInput) {
       console.error('Invalid input. Please enter valid numeric values.');
+      alert('Invalid input. Please enter valid numeric values.');
       return;
     }
 
@@ -49,7 +50,7 @@ export class AppComponent {
     })
       .then(response => response.json())
       .then(result => {
-        console.log('Calculation result:', result);
+        // console.log('Calculation result:', result);
         this.roiY1 = result.roiY1;
         this.roiY2 = result.roiY2;
         this.roiY3 = result.roiY3;
