@@ -64,6 +64,10 @@ Clone the server repo [here](https://github.com/IliaZolas/emerald-server).
 
 This project was managed using [Linear](https://linear.app/) and was synced with Github for automated issue and pull request tracking.
 
+## Hosting
+
+This application is hosted on [Railway.app](https://railway.app/), one of my favourite hosting providers. Both client and server repos are hosted seperately from each other.
+
 ## Conclusion 👨‍🚀
 
 I enjoyed building this project and have some thoughts on how it could be more practical
