@@ -37,6 +37,7 @@ Install node version 18.3.0 if you do not already have it. I prefer using NVM fo
 node -v
 
 nvm install v18.3.0
+nvm use v18.3.0
 ```
 
 Allow the installation to finish. It can take some time so go grab a coffee ☕.
