@@ -1,6 +1,6 @@
 # Emerald Calculator - Frontend
 
-This is a simple calculator that determines the ROI of managing a property with Emerald Stay. It's intended use is for prosepctive property owners who want to find out how much of a return they can make on their investment if they use Emerald Stay as a property management agency.
+This is a simple calculator that determines the ROI of managing a property with Emerald Stay. Its intended use is for prosepctive property owners who want to find out how much of a return they can make on their investment if they use Emerald Stay as a property management agency.
 
 ## How is ROI Calculated?
 
