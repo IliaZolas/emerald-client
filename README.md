@@ -14,7 +14,7 @@ Inputs
 Restrictions
 - Agency fees on the rent: 1st year 30%, 2nd year 25%, then 20% for the following years.
 
-This logic was translated and utilised in the server repo read me.
+This logic was translated and utilised in the server repo and explained in the read me.
 
 ## How to get started with this app
 
