@@ -1,8 +1,28 @@
-<main class="main">
-  <div class="text-3xl font-bold underline text-center ">
+<main class="main w-1/2 m-auto text-center">
+  <div class="py-10">
     <h1>ROI Calculator</h1>
-    <mat-slide-toggle>Angular project, Tailwind and Angular Material installed </mat-slide-toggle>
+  </div>
+  <div>
+    <form class="flex flex-col">
+      <mat-form-field>
+        <mat-label>Purchase price of the property</mat-label>
+        <input matInput type="number" [(ngModel)]="purchasePrice" name="purchasePrice">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Monthly rent amount</mat-label>
+        <input matInput type="number" [(ngModel)]="monthlyRent" name="monthlyRent">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Annual rental fee e.g. electricity</mat-label>
+        <input matInput type="number" [(ngModel)]="annualRentalFee" name="annualRentalFee">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="handleSubmit()">Calculate</button>
+    </form>
+  </div>
+  <div *ngIf="roiY1 || roiY2 || roiY3 || overallROI">
+    <p>ROI Year 1: {{ roiY1 }}</p>
+    <p>ROI Year 2: {{ roiY2 }}</p>
+    <p>ROI Year 3: {{ roiY3 }}</p>
+    <p>Overall ROI: {{ overallROI }}</p>
   </div>
 </main>
-
-<router-outlet></router-outlet>
