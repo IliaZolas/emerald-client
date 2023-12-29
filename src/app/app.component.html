@@ -1,28 +1,63 @@
-<main class="main w-1/2 m-auto text-center">
-  <div class="py-10">
-    <h1>ROI Calculator</h1>
+<main class="main w-full">
+
+  <div class="video-container">
+    <video width="100%" autoplay loop>
+      <source src="./assets/es-vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
-  <div>
-    <form class="flex flex-col">
-      <mat-form-field>
-        <mat-label>Purchase price of the property</mat-label>
-        <input matInput type="number" [(ngModel)]="purchasePrice" name="purchasePrice">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Monthly rent amount</mat-label>
-        <input matInput type="number" [(ngModel)]="monthlyRent" name="monthlyRent">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Annual rental fee e.g. electricity</mat-label>
-        <input matInput type="number" [(ngModel)]="annualRentalFee" name="annualRentalFee">
-      </mat-form-field>
-      <button mat-raised-button color="primary" (click)="handleSubmit()">Calculate</button>
-    </form>
+  <div class="header">
+    Emerald Stay Calculator
   </div>
-  <div *ngIf="roiY1 || roiY2 || roiY3 || overallROI">
-    <p>ROI Year 1: {{ roiY1 }}</p>
-    <p>ROI Year 2: {{ roiY2 }}</p>
-    <p>ROI Year 3: {{ roiY3 }}</p>
-    <p>Overall ROI: {{ overallROI }}</p>
+
+  <div class="calculator-container py-10">
+    <div class="py-10 text-center">
+      <h1>ROI Calculator</h1>
+      <p>Use the calculator below to calculate the ROI on your property</p>
+      <p>managed with Emerald Stay over a period of 3 years</p>
+    </div>
+
+    <div class="w-1/2 m-auto text-center calculator mobile-width">
+      
+      <form class="flex flex-col">
+        <mat-form-field>
+          <mat-label>Purchase price of the property</mat-label>
+          <input matInput type="number" [(ngModel)]="purchasePrice" name="purchasePrice" pattern="^[1-9]\d*(\.\d{1,2})?$" #purchasePriceInput="ngModel">
+          <mat-error *ngIf="purchasePriceInput.invalid && (purchasePriceInput.dirty || purchasePriceInput.touched)">
+            Invalid input. Please enter a valid number with up to 2 decimal places.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Monthly rent amount</mat-label>
+          <input matInput type="number" [(ngModel)]="monthlyRent" name="monthlyRent" pattern="^[1-9]\d*(\.\d{1,2})?$" #monthlyRentInput="ngModel">
+          <mat-error *ngIf="purchasePriceInput.invalid && (purchasePriceInput.dirty || purchasePriceInput.touched)">
+            Invalid input. Please enter a valid number with up to 2 decimal places.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Annual rental fee e.g. electricity</mat-label>
+          <input matInput type="number" [(ngModel)]="annualRentalFee" name="annualRentalFee" pattern="^[1-9]\d*(\.\d{1,2})?$" #annualRentalFeeInput="ngModel">
+          <mat-error *ngIf="purchasePriceInput.invalid && (purchasePriceInput.dirty || purchasePriceInput.touched)">
+            Invalid input. Please enter a valid number with up to 2 decimal places.
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button  [ngStyle]="{ 'background-color': '#222222', 'color': '#ffffff' }"  (click)="handleSubmit()">Calculate</button>
+      </form>
+      
+    </div>
+
+    <div *ngIf="roiY1 || roiY2 || roiY3 || overallROI">
+      <div class="results w-1/2 m-auto my-10 text-center mobile-width">
+        <p>Return on investment for Year 1: {{ roiY1 }}%</p>
+        <p>Return on investment for Year 2: {{ roiY2 }}%</p>
+        <p>Return on investment for Year 3: {{ roiY3 }}%</p>
+        <strong><p>Overall return on investment over 3 years: {{ overallROI }}%</p></strong>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="footer w-full">
+    Made by Ilia Zolas
   </div>
 </main>
