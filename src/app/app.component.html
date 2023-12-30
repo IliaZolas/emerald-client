@@ -9,28 +9,28 @@
     Emerald Stay Calculator
   </div>
   <div class="calculator-container py-10">
-    <div class="py-3 px-10 text-center">
+    <div class="py-1 px-10 text-center">
       <h1>ROI Calculator</h1>
       <p>Use the calculator below to calculate the ROI on your property managed with Emerald Stay over a period of 3 years.</p>
     </div>
-    <div class="w-1/2 m-auto text-center calculator mobile-width">
+    <div class="w-1/2 m-auto text-center calculator mobile-width my-3">
       <form class="flex flex-col">
         <mat-form-field>
-          <mat-label>Purchase price of the property</mat-label>
+          <mat-label>Purchase price of the property in Euros</mat-label>
           <input matInput type="number" [(ngModel)]="purchasePrice" name="purchasePrice" pattern="^[1-9]\d*(\.\d{1,2})?$" #purchasePriceInput="ngModel">
           <mat-error *ngIf="purchasePriceInput.invalid && (purchasePriceInput.dirty || purchasePriceInput.touched)">
             Invalid input. Please enter a valid number with up to 2 decimal places.
           </mat-error>
         </mat-form-field>
         <mat-form-field>
-          <mat-label>Monthly rent amount</mat-label>
+          <mat-label>Monthly rent amount in Euros</mat-label>
           <input matInput type="number" [(ngModel)]="monthlyRent" name="monthlyRent" pattern="^[1-9]\d*(\.\d{1,2})?$" #monthlyRentInput="ngModel">
           <mat-error *ngIf="purchasePriceInput.invalid && (purchasePriceInput.dirty || purchasePriceInput.touched)">
             Invalid input. Please enter a valid number with up to 2 decimal places.
           </mat-error>
         </mat-form-field>
         <mat-form-field>
-          <mat-label>Annual rental fee e.g. electricity</mat-label>
+          <mat-label>Annual rental fee in Euros e.g. electricity</mat-label>
           <input matInput type="number" [(ngModel)]="annualRentalFee" name="annualRentalFee" pattern="^[1-9]\d*(\.\d{1,2})?$" #annualRentalFeeInput="ngModel">
           <mat-error *ngIf="purchasePriceInput.invalid && (purchasePriceInput.dirty || purchasePriceInput.touched)">
             Invalid input. Please enter a valid number with up to 2 decimal places.
@@ -40,7 +40,7 @@
       </form>
     </div>
     <div *ngIf="overallROI">
-      <div class="results w-1/2 m-auto my-10 text-center mobile-width">
+      <div class="results w-1/2 m-auto my-5 text-center mobile-width">
         <strong><p>Overall return on investment over 3 years is {{ overallROI }}%</p></strong>
       </div>
     </div>
