@@ -18,7 +18,7 @@ h1 {
 }
 
 .calculator-container {
-    min-height: 81vh;
+    // min-height: 100vh;
 }
 
 .calculator {
@@ -41,8 +41,8 @@ h1 {
     background-color: rgb(177, 177, 177);
     height: 60px;
     text-align: center;
-    // position: fixed;
-    // bottom:0;
+    position: fixed;
+    bottom:0;
     padding: 20px;
     display: flex;
     flex-direction: column;
