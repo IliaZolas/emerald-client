@@ -48,6 +48,10 @@ h1 {
     flex-direction: column;
 }
 
+.input-group {
+    display: flex;
+}
+
 @media only screen and (max-width: 560px) {
     .header {
         position: absolute;
@@ -59,5 +63,11 @@ h1 {
     }
     .mobile-width {
         width: 90%;
+    }
+    .footer {
+        position:fixed;
+    }
+    .calculator-container {
+        min-height: 110vh;
     }
 }
