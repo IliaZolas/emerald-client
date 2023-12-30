@@ -55,7 +55,7 @@ h1 {
 @media only screen and (max-width: 560px) {
     .header {
         position: absolute;
-        font-size: 40px;
+        font-size: 30px;
         color: white;
         top:60px;
         width: 100%;
@@ -65,7 +65,7 @@ h1 {
         width: 90%;
     }
     .footer {
-        position:fixed;
+        position:relative;
     }
     .calculator-container {
         min-height: 110vh;
