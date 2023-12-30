@@ -1,5 +1,4 @@
 <main class="main w-full">
-
   <div class="video-container">
     <video width="100%" autoplay loop>
       <source src="./assets/es-vid.mp4" type="video/mp4">
@@ -9,15 +8,12 @@
   <div class="header">
     Emerald Stay Calculator
   </div>
-
   <div class="calculator-container py-10">
-    <div class="py-10 px-10 text-center">
+    <div class="py-3 px-10 text-center">
       <h1>ROI Calculator</h1>
       <p>Use the calculator below to calculate the ROI on your property managed with Emerald Stay over a period of 3 years.</p>
     </div>
-
     <div class="w-1/2 m-auto text-center calculator mobile-width">
-      
       <form class="flex flex-col">
         <mat-form-field>
           <mat-label>Purchase price of the property</mat-label>
@@ -42,20 +38,13 @@
         </mat-form-field>
         <button mat-raised-button  [ngStyle]="{ 'background-color': '#222222', 'color': '#ffffff' }"  (click)="handleSubmit()">Calculate</button>
       </form>
-      
     </div>
-
-    <div *ngIf="roiY1 || roiY2 || roiY3 || overallROI">
+    <div *ngIf="overallROI">
       <div class="results w-1/2 m-auto my-10 text-center mobile-width">
-        <p>Return on investment for Year 1: {{ roiY1 }}%</p>
-        <p>Return on investment for Year 2: {{ roiY2 }}%</p>
-        <p>Return on investment for Year 3: {{ roiY3 }}%</p>
-        <strong><p>Overall return on investment over 3 years: {{ overallROI }}%</p></strong>
+        <strong><p>Overall return on investment over 3 years is {{ overallROI }}%</p></strong>
       </div>
     </div>
-
   </div>
-  
   <div class="footer w-full">
     Made by Ilia Zolas
   </div>
